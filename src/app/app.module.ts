@@ -20,9 +20,9 @@ import { AdminmodifyuserComponent } from './adminmodifyuser/adminmodifyuser.comp
 import { EmipayerComponent } from './emipayer/emipayer.component';
 import { PurchasetableComponent } from './purchasetable/purchasetable.component';
 import { EmitableComponent } from './emitable/emitable.component';
-import { UsernotregisteredComponent } from './usernotregistered/usernotregistered.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { UsernotactivatedComponent } from './usernotactivated/usernotactivated.component';
 
 @NgModule({
   declarations: [
@@ -45,9 +45,9 @@ import { FooterComponent } from './footer/footer.component';
   EmipayerComponent,
   PurchasetableComponent,
   EmitableComponent,
-  UsernotregisteredComponent,
   NavbarComponent,
-  FooterComponent
+  FooterComponent,
+  UsernotactivatedComponent
   ],
   imports: [
     BrowserModule,
