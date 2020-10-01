@@ -5,21 +5,30 @@
   </head>
   <body style="background-color:black;">
   
-    <form class="modal-content animate" action="#" method="post">
+    <form class="modal-content animate" action="#" method="post"  form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
       <div class="imgcontainer">
         <span class="close" title="Close Modal">&times;</span>
         <img src="assets/images/check_login.jpg" alt="Avatar" class="avatar">
       </div>
+    
   
       <div class="container">
+      <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"></form> -->
+      <div class="form-group">
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-  
+        <input type="text"  class="form-control" placeholder="Enter Username" name="uname" formControlName="uname" id="uname" >
+        
+         <p *ngIf = "loginForm.controls.uname.errors && (loginForm.controls.uname.touched ||loginForm.controls.uname.dirty)">Username is required</p>
+      </div>
+      
+      <div class="form-group">
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password"class="form-control" placeholder="Enter Password" name="psw" formControlName="psw" id="psw">
+        <p *ngIf = "loginForm.controls.psw.errors && (loginForm.controls.psw.touched ||loginForm.controls.psw.dirty)">Password is required</p>
+      </div>
   
         <label for="login_type"><b>Login as</b></label>
-        <select type="login_type" name="login_type" id="login_type">
+        <select type="login_type" name="login_type" id="login_type" >
           <option value="user">User</option>
          <option value="admin">Admin</option>
         </select>

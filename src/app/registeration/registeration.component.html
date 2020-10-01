@@ -2,36 +2,58 @@
   <html>
   <body>
  
-    <form class="modal-content" action="#">
+    <form class="modal-content" action="#" form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="imgcontainer">
-        <img src="assets/images/login_avtar.jpg" alt="Avatar" class="avatar">
+        <img src="assets/images/login_avtar.jpg" alt="Avatar" class="avatar" >
       </div>
       <div class="container">
       
        <label for="text"><b>Name</b></label>
-        <input type="text" placeholder="Enter Full Name" name="name" required>
-      
+       <div class="form-group">
+        <input type="text" placeholder="Enter Full Name" name="name" formControlName="name" >
+        <p *ngIf = "registrationForm.controls.name.errors && (registrationForm.controls.name.touched ||registrationForm.controls.name.dirty)">Name is required</p>
+        </div>
+        <div class="form-group">
        <label for="phone"><b>Phone Number</b></label>
-         <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" pattern="+[0-9]{2}-[0-9]{10}" required>
-      
+         <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" formControlName="phone">
+         <p *ngIf = "registrationForm.controls.phone.errors && (registrationForm.controls.phone.touched ||registrationForm.controls.phone.dirty)">Phone number is required</p>
+      </div>
+      <div class="form-group">
         <label for="email"><b>Email</b></label>
-        <input type="email" placeholder="Enter Email" name="email" required>
-      
+        <input type="email" placeholder="Enter Email" name="email" formControlName="email">
+        <p *ngIf = "registrationForm.controls.email.errors && (registrationForm.controls.email.touched ||registrationForm.controls.email.dirty)">Email is required</p>
+      </div>
+
+      <div class="form-group">
       <label for="text"><b>Username</b></label>
-        <input type="text" placeholder="Username" name="username" required>
-  
+        <input type="text" placeholder="Username" name="uname" formControlName="uname">
+        <p *ngIf = "registrationForm.controls.uname.errors && (registrationForm.controls.uname.touched ||registrationForm.controls.uname.dirty)">Username  is required</p>
+      </div>
+
+      <div class="form-group">
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-  
+        <input type="password" placeholder="Enter Password" name="psw" formControlName="psw">
+        <p *ngIf = "registrationForm.controls.psw.errors && (registrationForm.controls.psw.touched ||registrationForm.controls.psw.dirty)">Password is required</p>
+      </div>
+
+       <div class="form-group">
         <label for="psw-repeat"><b>Confirm Password</b></label>
-        <input type="password" placeholder="Confirm Password" name="psw-confirm" required>
-      
+        <input type="password" placeholder="Confirm Password" name="confirmPassword" formControlName="confirmPassword">
+        <p *ngIf = "registrationForm.controls.confirmPassword.errors && (registrationForm.controls.confirmPassword.touched ||registrationForm.controls.confirmPassword.dirty)">Confirm Password is required</p>
+      </div>
+
+      <div class="form-group">
        <label for="date"><b>Date of Birth</b></label>
-        <input type="date" id="birthday" placeholder="Date of Birth" name="birthday" required>
+        <input type="date" id="birthday" placeholder="Date of Birth" name="birthday"  formControlName="birthday" >
+        <p *ngIf = "registrationForm.controls.birthday.errors && (registrationForm.controls.birthday.touched ||registrationForm.controls.birthday.dirty)">Confirm Password is required</p>
+      </div>
       
+      <div class="form-group">
       <label for="address"><b>Address</b></label>
-        <textarea type="address" placeholder="Complete Address" name="address" rows="3" cols="30" required>  </textarea>
-      
+        <textarea type="address" placeholder="Complete Address" name="address" rows="3" cols="30" formControl="address" ></textarea>
+        <p *ngIf = "registrationForm.controls.address.errors && (registrationForm.controls.address.touched ||registrationForm.controls.address.dirty)">Address is required</p>
+      </div>
+       
       <label  for="bank">Bank</label>
         <select type="bank" name="bank" id="bank">
       <option value="Allahabad Bank">Allahabad Bank</option>
@@ -83,27 +105,38 @@
   
     </select>
       
+    <div class="form-group">
        <label for="tel"><b>Account Number</b></label>
-         <input type="tel" id="acc_num" name="acc_num" placeholder="XXXXXXXXXXXX" pattern="[0-9]{}" required>
-       
+         <input type="tel" id="acc_num" name="acc_num" placeholder="XXXXXXXXXXXX" formControlName="acc_num">
+         <p *ngIf = "registrationForm.controls.acc_num.errors && (registrationForm.controls.acc_num.touched ||registrationForm.controls.acc_num.dirty)">Account Number is required</p>
+      </div>
+      <div class="form-group">
        <label for="text"><b>IFSC Code</b></label>
-        <input type="text" placeholder="IFSC Code" name="ifsc" required>
-      
-       <label for="card"><b>Card Type</b></label>
-       <select type="card" name="card" id="card">
+        <input type="text" placeholder="IFSC Code" name="ifsc" formControlName="ifsc">
+        <p *ngIf = "registrationForm.controls.ifsc.errors && (registrationForm.controls.ifsc.touched ||registrationForm.controls.ifsc.dirty)">IFSC is required</p>
+     </div>
+     <div class="form-group">
+       <label for="card"><b>Card Type</b></label >
+       <select type="card" name="card" id="card" formControlName="card">
          <option value="Titanium">Titanium</option>
          <option value="Gold">Gold</option>
-       </select>
+         <p *ngIf = "registrationForm.controls.card.errors && (registrationForm.controls.card.touched ||registrationForm.controls.card.dirty)">CARD-TYPE is required</p>
+         </select>
+       </div>
        
+       <div class="form-group">
         <label for="tel"><b>Aadhaar Number</b></label><br><br>
-        <input type="tel" id="aadhaar" name="aadhaar" placeholder="XXXX-XXXX-XXXX" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required><br><br>
-      
+        <input type="tel" id="aadhaar" name="aadhaar" placeholder="XXXX-XXXX-XXXX" formControlName="adhar"><br><br>
+        <p *ngIf = "registrationForm.controls.adhar.errors && (registrationForm.controls.adhar.touched ||registrationForm.controls.adhar.dirty)">ADHAR NUMBER is required</p>
+      </div>
         <label for="file"><b>Aadhaar Upload</b></label>
           <input type="file" id="img" name="a_img" accept="image/*" required>
       
+      <div class="form-group">
       <label for="text"><b>PAN Number</b></label>
-        <input type="text" placeholder="PAN Number" name="pan" required>
-      
+        <input type="text" placeholder="PAN Number" name="pan" formControlName="pan">
+        <p *ngIf = "registrationForm.controls.pan.errors && (registrationForm.controls.pan.touched ||registrationForm.controls.pan.dirty)">ADHAR NUMBER is required</p>
+      </div>
        <label for="file"><b>PAN Upload</b></label>
          <input type="file" id="img" name="p_img" accept="image/*" required>
      
@@ -119,5 +152,6 @@
         </div>
       </div>
     </form>
+    
   </body>
   </html>

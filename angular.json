@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fms"
+    }
+  },
+  "defaultProject": "fms",
+  "cli": {
+    "analytics": "ba3820a6-ee9d-406d-9bfb-61fef91717ed"
+  }
 }

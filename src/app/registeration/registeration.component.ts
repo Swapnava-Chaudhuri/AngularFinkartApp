@@ -10,6 +10,7 @@ export class RegisterationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
