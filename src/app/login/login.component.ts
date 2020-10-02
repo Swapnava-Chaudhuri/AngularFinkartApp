@@ -14,20 +14,12 @@ export class LoginComponent implements OnInit
   invalidLogin: boolean = false;
 
   constructor(private formBuilder: FormBuilder,private router: Router ) { }
-
-  
-   
-
   ngOnInit() {
-    
-
     this.loginForm = this.formBuilder.group({
       uname: ['', Validators.required],
       psw: ['', Validators.required]
     });
-
   }
-
   onSubmit(){
     alert("submit")
     this.submitted = true;
