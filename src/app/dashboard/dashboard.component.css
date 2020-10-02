@@ -1,8 +1,4 @@
-{
-    box-sizing: border-box;
-  }
-  
-  .column {
+.column {
     float: left;
     width: 55%;
     padding: 10px;
