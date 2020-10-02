@@ -7,9 +7,9 @@
         <img src="assets/images/login_avtar.jpg" alt="Avatar" class="avatar" >
       </div>
       <div class="container">
-      
+        <div class="form-group">
        <label for="text"><b>Name</b></label>
-       <div class="form-group">
+       
         <input type="text" placeholder="Enter Full Name" name="name" formControlName="name" >
         <p *ngIf = "registrationForm.controls.name.errors && (registrationForm.controls.name.touched ||registrationForm.controls.name.dirty)">Name is required</p>
         </div>
@@ -33,7 +33,7 @@
       <div class="form-group">
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" formControlName="psw">
-        <p *ngIf = "registrationForm.controls.psw.errors && (registrationForm.controls.psw.touched ||registrationForm.controls.psw.dirty)">Password is required</p>
+        <p *ngIf = "registrationForm.controls.psw.errors && (registrationForm.controls.psw.touched ||registrationForm.controls.psw.dirty)">Password of minimum is required</p>
       </div>
 
        <div class="form-group">
@@ -50,12 +50,14 @@
       
       <div class="form-group">
       <label for="address"><b>Address</b></label>
-        <textarea type="address" placeholder="Complete Address" name="address" rows="3" cols="30" formControl="address" ></textarea>
+        <textarea type="address" placeholder="Complete Address" name="address" rows="3" cols="30" formControlName="address" ></textarea>
         <p *ngIf = "registrationForm.controls.address.errors && (registrationForm.controls.address.touched ||registrationForm.controls.address.dirty)">Address is required</p>
       </div>
        
-      <label  for="bank">Bank</label>
+       
+      <label  for="bank"><b>Bank</b></label>
         <select type="bank" name="bank" id="bank">
+        
       <option value="Allahabad Bank">Allahabad Bank</option>
       <option value="Andhra Bank">Andhra Bank</option>
       <option value="Axis Bank">Axis Bank</option>
@@ -104,25 +106,26 @@
   
   
     </select>
+     
       
     <div class="form-group">
        <label for="tel"><b>Account Number</b></label>
          <input type="tel" id="acc_num" name="acc_num" placeholder="XXXXXXXXXXXX" formControlName="acc_num">
-         <p *ngIf = "registrationForm.controls.acc_num.errors && (registrationForm.controls.acc_num.touched ||registrationForm.controls.acc_num.dirty)">Account Number is required</p>
+         <p *ngIf = "registrationForm.controls.acc_num.errors && (registrationForm.controls.acc_num.touched ||registrationForm.controls.acc_num.dirty)">Account Number of 12 digits is required</p>
       </div>
       <div class="form-group">
        <label for="text"><b>IFSC Code</b></label>
         <input type="text" placeholder="IFSC Code" name="ifsc" formControlName="ifsc">
         <p *ngIf = "registrationForm.controls.ifsc.errors && (registrationForm.controls.ifsc.touched ||registrationForm.controls.ifsc.dirty)">IFSC is required</p>
      </div>
-     <div class="form-group">
+     
        <label for="card"><b>Card Type</b></label >
-       <select type="card" name="card" id="card" formControlName="card">
+       <select type="card" name="card" id="card">
          <option value="Titanium">Titanium</option>
          <option value="Gold">Gold</option>
-         <p *ngIf = "registrationForm.controls.card.errors && (registrationForm.controls.card.touched ||registrationForm.controls.card.dirty)">CARD-TYPE is required</p>
+         
          </select>
-       </div>
+       
        
        <div class="form-group">
         <label for="tel"><b>Aadhaar Number</b></label><br><br>
@@ -130,7 +133,7 @@
         <p *ngIf = "registrationForm.controls.adhar.errors && (registrationForm.controls.adhar.touched ||registrationForm.controls.adhar.dirty)">ADHAR NUMBER is required</p>
       </div>
         <label for="file"><b>Aadhaar Upload</b></label>
-          <input type="file" id="img" name="a_img" accept="image/*" required>
+          <input type="file" id="a_img" name="a_img" accept="image/*" required>
       
       <div class="form-group">
       <label for="text"><b>PAN Number</b></label>
@@ -138,7 +141,7 @@
         <p *ngIf = "registrationForm.controls.pan.errors && (registrationForm.controls.pan.touched ||registrationForm.controls.pan.dirty)">ADHAR NUMBER is required</p>
       </div>
        <label for="file"><b>PAN Upload</b></label>
-         <input type="file" id="img" name="p_img" accept="image/*" required>
+         <input type="file" id="p_img" name="p_img" accept="image/*" required>
      
         <label>
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
