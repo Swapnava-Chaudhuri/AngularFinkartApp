@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { AdminmodifyuserComponent } from './adminmodifyuser/adminmodifyuser.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmipayerComponent } from './emipayer/emipayer.component';
 import { EmitableComponent } from './emitable/emitable.component';
@@ -43,7 +44,8 @@ const routes: Routes = [
   {path:'purchase-table',component:PurchasetableComponent},
   {path:'user-not-activated',component:UsernotactivatedComponent},
   {path:'admin-home',component:AdminhomeComponent},
-  {path:'admin-modify-user',component:AdminmodifyuserComponent}
+  {path:'admin-modify-user',component:AdminmodifyuserComponent},
+  {path:'change-password', component:ChangepasswordComponent}
 
 ];
 
@@ -56,4 +58,4 @@ export const routingComponents = [HomepageComponent,LoginComponent,Registeration
   LoginComponent,RegisterationComponent,ProductPageComponent,DashboardComponent,MeetTheTeamComponent,Product1Component,
   Product2Component,Product3Component, Product4Component,Product5Component,
   Product6Component, AdminhomeComponent,AdminmodifyuserComponent,EmipayerComponent,PurchasetableComponent,EmitableComponent, NavbarComponent,
-  FooterComponent, UsernotactivatedComponent]
+  FooterComponent, UsernotactivatedComponent, ChangepasswordComponent]
