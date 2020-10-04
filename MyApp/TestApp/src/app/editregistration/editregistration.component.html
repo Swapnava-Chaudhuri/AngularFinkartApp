@@ -1,0 +1,154 @@
+<app-adminnavbar></app-adminnavbar>
+    <form class="modal-content" action="#" form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="imgcontainer">
+        <img src="assets/images/login_avtar.jpg" alt="Avatar" class="avatar" >
+      </div>
+      <div class="container">
+        <div class="form-group">
+       <label for="text"><b>Name</b></label>
+       
+        <input type="text" placeholder="Enter Full Name" name="name" id="name" formControlName="name"  >
+        <p *ngIf = "editForm.controls.name.errors && (editForm.controls.name.touched ||editForm.controls.name.dirty)">Name is required</p>
+        </div>
+        <div class="form-group">
+       <label for="phoneNo"><b>Phone Number</b></label>
+         <input type="tel" id="phoneNo" name="phoneNo" placeholder="+91-XXXXXXXXXX" id="phoneNo" formControlName="phoneNo">
+         <p *ngIf = "editForm.controls.phoneNo.errors && (editForm.controls.phoneNo.touched ||editForm.controls.phoneNo.dirty)">Phone number is required</p>
+      </div>
+      <div class="form-group">
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" id="email" formControlName="email">
+        <p *ngIf = "editForm.controls.email.errors && (editForm.controls.email.touched ||editForm.controls.email.dirty)">Email is required</p>
+      </div>
+
+      <div class="form-group">
+      <label for="text"><b>Username</b></label>
+        <input type="text" placeholder="Username" name="username" id="username" formControlName="username" disabled>
+        <p *ngIf = "editForm.controls.username.errors && (editForm.controls.username.touched ||editForm.controls.username.dirty)">Username  is required</p>
+      </div>
+
+      <div class="form-group">
+       <label for="dob"><b>Date of Birth</b></label>
+        <input type="date" id="dob" placeholder="Date of Birth" name="dob"  formControlName="dob" >
+        <p *ngIf = "editForm.controls.dob.errors && (editForm.controls.dob.touched ||editForm.controls.dob.dirty)">Confirm Password is required</p>
+      </div>
+      
+      <div class="form-group">
+      <label for="address"><b>Address</b></label>
+        <textarea id="address" type="text" placeholder="Complete Address" name="address" rows="3" cols="30" formControlName="address" ></textarea>
+        <p *ngIf = "editForm.controls.address.errors && (editForm.controls.address.touched ||editForm.controls.address.dirty)">Address is required</p>
+      </div>
+       
+       
+      <label  for="bankName"><b>Bank</b></label>
+        <select type="bank" name="bankName" id="bankName" (change)="changeTypeBank($event)" [value]='this.registration.bankName'>
+        
+      <option value="Allahabad Bank">Allahabad Bank</option>
+      <option value="Andhra Bank">Andhra Bank</option>
+      <option value="Axis Bank">Axis Bank</option>
+      <option value="Bank of Bahrain and Kuwait">Bank of Bahrain and Kuwait</option>
+      <option value="Bank of Baroda - Corporate Banking">Bank of Baroda - Corporate Banking</option>
+      <option value="Bank of Baroda - Retail Banking">Bank of Baroda - Retail Banking</option>
+      <option value="Bank of India">Bank of India</option>
+      <option value="Bank of Maharashtra">Bank of Maharashtra</option>
+      <option value="Canara Bank">Canara Bank</option>
+      <option value="Central Bank Of India">Central Bank Of India</option>
+      <option value="City Union Bank">City Union Bank</option>
+      <option value="Corporation Bank">Corporation Bank</option>
+      <option value="Deustche Bank">Deustche Bank</option>
+      <option value="Development Credit Bank">Development Credit Bank</option>
+      <option value="Dhanlaxmi Bank">Dhanlaxmi Bank</option>
+      <option value="Federal Bank">Federal Bank</option>
+      <option value="ICICI Bank">ICICI Bank</option>
+      <option value="IDBI Bank">IDBI Bank</option>
+      <option value="Indian Bank">Indian Bank</option>
+      <option value="Indina Overseas Bank">Indina Overseas Bank</option>
+      <option value="IndusInd Bank">IndusInd Bank</option>
+      <option value="ING Vysya Bank">ING Vysya Bank</option>
+    <option value="Jammu & Kashmir Bank">Jammu & Kashmir Bank</option>
+    <option value="Karnatak Bank Ltd">Karnatak Bank Ltd</option>
+    <option value="Kotak Bank">Kotak Bank</option>
+    <option value="Laxmi Vilas Bank">Laxmi Vilas Bank</option>
+    <option value="Oriental Bank of Commerce">Oriental Bank of Commerce</option>
+    <option value="Punjab National Bank - Corporate Banking">Punjab National Bank - Corporate Banking</option>
+    <option value="Punjab National Bank - Retail Banking">Punjab National Bank - Retail Banking</option>
+    <option value="Punjab & Sind Bank">Punjab & Sind Bank</option>
+    <option value="Shamrao Vitthal Cooperative Bank">Shamrao Vitthal Cooperative Bank</option>
+    <option value="South Indian Bank">South Indian Bank</option>	
+    <option value="State Bank of Bikaner & Jaipur">State Bank of Bikaner & Jaipur</option>
+    <option value="State Bank of Hyderabad">State Bank of Hyderabad</option>
+    <option value="State Bank of India">State Bank of India</option>
+    <option value="State Bank of Mysore">State Bank of Mysore</option>
+    <option value="State Bank of Patiala">State Bank of Patiala</option>
+    <option value="State Bank of Travancore">State Bank of Travancore</option>
+    <option value="Syndicate Bank">Syndicate Bank</option>
+    <option value="Tamilnad Mercantile Bank Ltd.">Tamilnad Mercantile Bank Ltd.</option>
+    <option value="UCO Bank">UCO Bank</option>
+    <option value="Union Bank of India">Union Bank of India</option>
+    <option value="United Bank of India">United Bank of India</option>
+    <option value="Vijaya Bank">Vijaya Bank</option>
+    <option value="Yes Bank Ltd">Yes Bank Ltd</option>
+  
+  
+    </select>
+     
+      
+    <div class="form-group">
+       <label for="savingsAccount"><b>Account Number</b></label>
+         <input type="tel" id="savingsAccount" name="savingsAccount" placeholder="XXXXXXXXXXXX" formControlName="savingsAccount">
+         <p *ngIf = "editForm.controls.savingsAccount.errors && (editForm.controls.savingsAccount.touched ||editForm.controls.savingsAccount.dirty)">Account Number of 12 digits is required</p>
+      </div>
+      <div class="form-group">
+       <label for="ifsc"><b>IFSC Code</b></label>
+        <input type="text" placeholder="IFSC Code" name="ifsc" formControlName="ifsc">
+        <p *ngIf = "editForm.controls.ifsc.errors && (editForm.controls.ifsc.touched ||editForm.controls.ifsc.dirty)">IFSC is required</p>
+     </div>
+     
+        <div>
+       <label for="cardType"><b>Card Type</b></label >
+       <select  name="cardType" id="cardType" (change)="changeTypeCard($event)" [value]='this.registration.cardType'>
+         <option value="platinum">Platinum</option>
+         <option value="gold">Gold</option>
+         </select>
+        </div>
+       
+       <div class="form-group">
+        <label for="aadhar"><b>aadhar Number</b></label>
+        <input type="text" id="aadhar" name="aadhar" placeholder="XXXX-XXXX-XXXX" formControlName="aadhar"><br><br>
+        <p *ngIf = "editForm.controls.aadhar.errors && (editForm.controls.aadhar.touched ||editForm.controls.aadhar.dirty)">AADHAR NUMBER is required</p>
+      </div>
+        <label for="a_img"><b>aadhar Upload</b></label>
+          <input type="file" id="a_pdf" name="a_pdf" accept=".pdf" required>
+      
+      <div class="form-group">
+      <label for="pan"><b>PAN Number</b></label>
+        <input type="text" placeholder="PAN Number" name="pan" formControlName="pan">
+        <p *ngIf = "editForm.controls.pan.errors && (editForm.controls.pan.touched ||editForm.controls.pan.dirty)">PAN NUMBER is required</p>
+      </div>
+      
+       <label for="p_pdf"><b>PAN Upload</b></label>
+         <input type="file" id="p_pdf" name="p_pdf" accept=".pdf" required>
+     
+         <div class="form-group">
+            <label for="comments"><b>Comments</b></label>
+              <textarea id="comments" type="text" placeholder="Comments" name="comments" rows="3" cols="30" formControlName="comments" ></textarea>
+              <p *ngIf = "editForm.controls.comments.errors && (editForm.controls.comments.touched ||editForm.controls.comments.dirty)">Comments is required</p>
+            </div>
+
+            <div class="form-group" >
+              
+                <!-- <input id="toggle-event" type="checkbox"  data-toggle="toggle" data-on="Accepted" data-off="Deactivated" data-onstyle="success" data-offstyle="danger" (change)="toggleEditable($event)" [checked]="this.registration.status==='accepted'?'checked':null"> -->
+                <label class="switch">
+                  <input type="checkbox" id="toggle-event" (change)="toggleEditable($event)" [checked]="this.registration.status==='accepted'?'checked':null">>
+                  <span class="slider"></span>
+                </label>
+              </div>
+  
+        <div class="clearfix">
+          <button type="button" class="cancelbtn" (click)='onDelete()'>Delete</button>
+          <button type="submit" class="signupbtn" [disabled]="editForm.invalid" >Save Edits</button>
+        </div>
+      </div>
+    </form>
+ 
+

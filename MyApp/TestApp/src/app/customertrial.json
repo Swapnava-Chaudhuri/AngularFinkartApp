@@ -1,0 +1,88 @@
+{
+    "username": "lorem",
+    "dob": "3880-04-24",
+    "email": "swapnava.chaudhuri@gmail.com",
+    "phoneNo": "787878788",
+    "address": "123/32/4 adjaopdj road,mumbai-90",
+    "name": "Makarand Bhoir",
+    "savingsAccount": "8909898321",
+    "aadhar": "2312321",
+    "pan": "23131BGU",
+    "bankName": "SBI",
+    "ifsc": "213FDS",
+    "card": {
+       "cardNumber": "1234-2345-1233-1233",
+       "validTill": "3921-05-04",
+       "usedLimit": 40000,
+       "remainingLimit": 0,
+       "cardType": {
+          "cardType": "gold",
+          "joiningFees": 199.99,
+          "creditLimit": 40000
+       }
+    },
+    "purchases": [
+       {
+          "purchaseId": 1,
+          "emiAmount": 10000,
+          "months": 3,
+          "dateOfPurchase": "2020-09-30",
+          "emis": [
+             {
+                "emiId": 2,
+                "dateOfPayment": "2020-03-30",
+                "balance": 20000,
+                "paid": false
+             },
+             {
+                "emiId": 3,
+                "dateOfPayment": "2020-04-30",
+                "balance": 10000,
+                "paid": true
+             },
+             {
+                "emiId": 1,
+                "dateOfPayment": "2020-10-05",
+                "balance": 30000,
+                "paid": false
+             }
+          ],
+          "product": {
+             "productId": 23,
+             "productRate": 30000,
+             "productName": "smartphone"
+          }
+       },
+       {
+        
+        "emiAmount": 10000,
+        "months": 3,
+        "dateOfPurchase": "2020-09-30",
+        "emis": [
+           {
+              
+              "dateOfPayment": "2020-10-05",
+              "balance": 20000,
+              "paid": false
+           },
+           {
+              
+              "dateOfPayment": "2020-04-30",
+              "balance": 10000,
+              "paid": false
+           },
+           {
+              
+              "dateOfPayment": "2020-02-29",
+              "balance": 30000,
+              "paid": false
+           }
+        ],
+        "product": {
+           "productId": 23,
+           "productRate": 30000,
+           "productName": "smartphone"
+        }
+     }
+    ]
+ }
