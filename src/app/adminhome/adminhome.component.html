@@ -1,54 +1,23 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2 style="text-align:center"><pre>Admin Dashboard                                                      <button type="submit" value="Save" >Save</button></pre></h2>
+<app-adminnavbar></app-adminnavbar>
+<h2 style="text-align:center"><pre>Admin Dashboard</pre></h2>
 
 <table>
   <tr>
-    <th>S.No.</th>
-    <th>Name</th>
     <th>Username</th>
+    <th>Name</th>
 	<th>Card Type</th>
 	<th>cibil Score</th>
-	<th>Customer info</th>
-	<th>Status</th>
-	<th>Comment</th>
-	<th>Accept/Reject</th>
+    <th>Accept/Reject</th>
+    <th>Customer info</th>
   </tr>
-  <tr>
-	<td>1.</td>
-	<td>Anmol</td>
-    <td>AJ234</td>
-    <td>Gold</td>
-	<td>965</td>
-	<td><button type="submit" value="more" style="float:center">more</button></td>
-	<td>Rejected</td>
-	<td><textarea id="comment" name="comment" rows="1" cols="20">wrong info</textarea></td>
-	<td><input type="checkbox" name="Accept" value="Accept">Accept<input type="checkbox" name="Reject" value="Reject">Reject</td>
+  <tr *ngFor="let registration of registrations">
+	<td>{{registration.username}}</td>
+    <td>{{registration.name}}</td>
+    <td>{{registration.cardType}}</td>
+    <td>{{registration.cibilScore}}</td>
+    <td>{{registration.status}}</td>
+	<td><button type="submit" value="more" style="float:center" (click)='onSubmit(registration)'>more</button></td>
   </tr>
-  <tr>
-	<td>2.</td>
-	<td>Abhinav</td>
-    <td>abhi</td>
-    <td>Platinum</td>
-	<td>760</td>
-	<td><button type="submit" value="more" style="float:center">more</button></td>
-	<td>Accepted</td>
-	<td><textarea id="comment" name="comment" rows="1" cols="20">NA</textarea></td>
-	<td><input type="checkbox" name="Accept" value="Accept">Accept<input type="checkbox" name="Reject" value="Reject">Reject</td>
-  </tr>
-  <tr>
-    <td>3.</td>
-	<td>Deepak</td>
-    <td>deep</td>
-    <td>Gold</td>
-	<td>700</td>
-	<td><button type="submit" value="more" style="float:center">more</button></td>
-	<td>Pending</td>
-	<td><textarea id="comment" name="comment" rows="1" cols="20"></textarea></td>
-	<td><input type="checkbox" name="Accept" value="Accept">Accept<input type="checkbox" name="Reject" value="Reject">Reject</td>
-  </tr>
+
 </table>
-</body>
-</html>
+

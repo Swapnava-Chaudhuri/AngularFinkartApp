@@ -1,1 +1,22 @@
-<p>product1 works!</p>
+<app-navbar></app-navbar>
+<div class="card">
+    <img src="C:\Users\HP\Desktop\LTI ASS BT\Gladiator\Products\thom-bradley-A6qNzfJXRGQ-unsplash.jpg" alt="Denim Jeans" style="width:100%">
+    <h3><b>{{this.product.productName}} </b></h3>
+    <p class="price">₹ {{this.product.productRate}}</p>
+    <p style= "color:black"><i> 
+      6.1-inch (15.5 cm) Liquid Retina HD LCD display
+      Water and dust resistant 
+      Dual-camera system with 12MP Ultra Wide cameras; Night mode, Portrait mode, and 4K video up to 60fps
+      12MP TrueDepth front camera with Portrait mode, 4K video, and Slo-Mo
+      Face ID for secure authentication and Apple Pay
+      A13 Bionic chip with third-generation Neural Engine
+      Fast-charge capable </i></p>
+
+  </div>
+  <label for="EMI">Choose a EMI option:</label>
+  <select name="months" id="months" (change)="changeMonths($event)">
+    <option value="3">3</option>
+    <option value="6">6</option>
+    <option value="9">9</option>
+  </select> 
+  <p><button (click)='onPurchase()'>Purchase Now</button></p>

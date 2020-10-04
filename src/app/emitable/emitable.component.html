@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <!DOCTYPE html>
 <html>
 <body>
@@ -8,82 +9,37 @@
     <th>EMI ID</th>
     <th>Payment Month</th>
     <th>Purchase ID</th>
-	<th>Product Name</th>
+    <th>Product Name</th>
 	<th>EMI</th>
   </tr>
- <tr>
-	<td>119</td>
-	<td>July</td>
-    <td>546</td>
-    <td>Laptop</td>
-	<td>2000</td>
+ <tr *ngFor="let emi of paidEmis">
+	<td>{{emi.emiId}}</td>
+	<td>{{emi.monthOfPayment}}</td>
+    <td>{{emi.purchaseId}}</td>
+    <td>{{emi.productName}}</td>
+	<td>{{emi.emiAmount}}</td>
   </tr>
-  <tr>
-	<td>120</td>
-	<td>August</td>
-    <td>546</td>
-    <td>Laptop</td>
-	<td>2000</td>  
-  </tr>
-  <tr>
-	<td>121</td>
-	<td>September</td>
-    <td>546</td>
-    <td>Laptop</td>
-	<td>2000</td>
-  <tr>
-	<td>122</td>
-	<td>October</td>
-    <td>546</td>
-    <td>Laptop</td>
-	<td>2000</td>  
-  </tr>	
+
 </table>
 <h2 style="text-align:center">Future Payments</h2>
 <table>
-  <tr>
-	<th>EMI ID</th>
-    <th>Due Month</th>
-    <th>Purchase ID</th>
-	<th>Product Name</th>
-	<th>EMI</th>
-  </tr>
- <tr>
-	<td>123</td>
-	<td>October</td>
-    <td>345</td>
-    <td>Smartwatch</td>
-	<td>6666.66</td>
-  </tr>
-  <tr>
-	<td>124</td>
-	<td>November</td>
-    <td>345</td>
-    <td>Smartwatch</td>
-	<td>6666.66</td>  
-  </tr>
-  <tr>
-	<td>125</td>
-	<td>December</td>
-    <td>345</td>
-    <td>Smartwatch</td>
-	<td>6666.66</td>
-  <tr>
-	<td>126</td>
-	<td>November</td>
-    <td>546</td>
-    <td>Laptop</td>
-	<td>2000</td>  
-  </tr>	  
-  <tr>
-	<td>127</td>
-	<td>December</td>
-    <td>546</td>
-    <td>Laptop</td>
-	<td>2000</td>  
+    <tr>
+        <th>EMI ID</th>
+        <th>Payment Month</th>
+        <th>Purchase ID</th>
+        <th>Product Name</th>
+        <th>EMI</th>
+      </tr>
+  <tr *ngFor="let emi of pendingEmis">
+	<td>{{emi.emiId}}</td>
+	<td>{{emi.monthOfPayment}}</td>
+    <td>{{emi.purchaseId}}</td>
+    <td>{{emi.productName}}</td>
+	<td>{{emi.emiAmount}}</td>
   </tr>
  </table>
 </body>
 </html>
+
 
 
