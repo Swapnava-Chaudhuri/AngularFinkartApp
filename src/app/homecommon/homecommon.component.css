@@ -1,8 +1,4 @@
-img:hover {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-  }
-  .flip-card {
+.flip-card {
   background-color: white;
   width: 300px;
   height: 300px;
@@ -40,4 +36,14 @@ img:hover {
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
+}
+button {
+  background-color: #2980b9;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }

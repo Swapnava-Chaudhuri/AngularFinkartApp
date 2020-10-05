@@ -48,7 +48,7 @@
       
       <div class="form-group">
       <label for="address"><b>Address</b></label>
-        <textarea id="address" type="text" placeholder="Complete Address" name="address" rows="3" cols="30" formControlName="address" ></textarea>
+        <textarea id="address" type="address" placeholder="Complete Address" name="address" rows="3" cols="30" formControlName="address" ></textarea>
         <p *ngIf = "registrationForm.controls.address.errors && (registrationForm.controls.address.touched ||registrationForm.controls.address.dirty)">Address is required</p>
       </div>
        
