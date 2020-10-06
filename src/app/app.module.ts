@@ -26,6 +26,16 @@ import { Forgotpassword3Component } from './forgotpassword3/forgotpassword3.comp
 import { EmitableComponent } from './emitable/emitable.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { Product1Component } from './product1/product1.component';
+import { Product2Component } from './product2/product2.component';
+import { Product3Component } from './product3/product3.component';
+import { Product4Component } from './product4/product4.component';
+import { Product5Component } from './product5/product5.component';
+import { Product6Component } from './product6/product6.component';
+import { Product7Component } from './product7/product7.component';
+import { Product8Component } from './product8/product8.component';
+import { Product9Component } from './product9/product9.component';
+import { Product10Component } from './product10/product10.component';
+import { Product11Component } from './product11/product11.component';
 
 
 
@@ -73,7 +83,17 @@ const routes:Routes=[
     Forgotpassword3Component,
     EmitableComponent,
     ProductPageComponent,
-    Product1Component
+    Product1Component,
+    Product2Component,
+    Product3Component,
+    Product4Component,
+    Product5Component,
+    Product6Component,
+    Product7Component,
+    Product8Component,
+    Product9Component,
+    Product10Component,
+    Product11Component
   ],
   imports: [
     BrowserModule,

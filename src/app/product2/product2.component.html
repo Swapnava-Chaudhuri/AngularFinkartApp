@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
-    <meta name="robots" content="noindex,follow"/>
+    <meta name="robots" content="noindex,follow" />
+
   </head>
 
   <body>
@@ -13,7 +14,7 @@
       <!-- Left Column / Headphones Image -->
       
 	  <div class="left-column">
-        <img data-image="red" class="active" src="src\assets\images\p1.jpg" alt="">
+        <img data-image="red" class="active" src="src\assets\images\p2.jpg" alt="">
       </div>
 
 
@@ -26,20 +27,18 @@
           <p style= "color:gray;"><i> 
       <h3>Features:  </h3>
 	  <h4>
-    <ul style= "color:gray;">
-      <li>64 GB Black</li>
-	    <li>6.1-inch (15.5 cm) Liquid Retina HD LCD display</li>
-      <li>Water and dust resistant </li>
-      <li>Dual-camera system with 12MP Ultra Wide cameras; Night mode, Portrait mode, and 4K video up to 60fps</li>
-      <li>12MP TrueDepth front camera with Portrait mode, 4K video, and Slo-Mo</li>
-      <li>Face ID for secure authentication and Apple Pay</li>
-      <li>A13 Bionic chip with third-generation Neural Engine</li>
-      <li>Fast-charge capable</li>
-    </ul>
-    </h4>
+	  <ul style= "color:gray;">
+	  <li>Automatically on, automatically connected</li>
+	  <li>Easy setup for all your Apple devices</li>
+      <li>Quick access to Siri by saying “Hey Siri”</li>
+      <li>New Apple H1 headphone chip delivers faster wireless connection to your devices</li>
+      <li>Charges quickly in the case</li>
+      <li>Case can be charged either wirelessly using a Qi-compatible charging mat or using the Lightning connector</li>
+      </ul>
+      </h4>
 	  </i>
 	  </p>
-        </div>
+       </div>
 
         <label for="EMI" style="color:blue;">Choose a EMI option:</label>
 		<select name="months" id="months" (change)="changeMonths($event)" style="width:20%;">
@@ -54,7 +53,7 @@
 		<br>
 			
 		<div class="product-price">
-          <span>₹  {{this.product.productRate}}</span>
+          <span>₹ {{this.product.productRate}}</span>
           <a href="#" (click)='onPurchase()' class="cart-btn">Buy Now</a>
         </div>
       </div>
