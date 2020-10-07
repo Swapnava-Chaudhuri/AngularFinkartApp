@@ -1,7 +1,8 @@
 <app-adminnavbar></app-adminnavbar>
-<h2 style="text-align:center"><pre>Admin Dashboard</pre></h2>
+<h2 style="text-align:center;padding: 30px;">Admin Dashboard</h2>
 
-<table>
+<table class="table table-hover">
+  <thead class="table-dark">
   <tr>
     <th>Username</th>
     <th>Name</th>
@@ -10,14 +11,16 @@
     <th>Accept/Reject</th>
     <th>Customer info</th>
   </tr>
+</thead>
+<tbody>
   <tr *ngFor="let registration of registrations">
 	<td>{{registration.username}}</td>
     <td>{{registration.name}}</td>
     <td>{{registration.cardType}}</td>
     <td>{{registration.cibilScore}}</td>
     <td>{{registration.status}}</td>
-	<td><button type="submit" value="more" style="float:center" (click)='onSubmit(registration)'>more</button></td>
+	<td><button type="submit" value="more" style="float:center" (click)='onSubmit(registration)' class="btn btn-secondary btn-lg">more</button></td>
   </tr>
-
+  <tbody>
 </table>
 

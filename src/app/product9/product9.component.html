@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <meta name="robots" content="noindex,follow" />
-
-  </head>
+<app-navbar></app-navbar>
 
   <body>
     <main class="container">
@@ -14,7 +6,7 @@
       <!-- Left Column / Headphones Image -->
       
 	  <div class="left-column">
-        <img data-image="red" class="active" src="src\assets\images\p9.jpg" alt="">
+        <img data-image="red" class="active" src="assets\images\p9.jpg" alt="">
       </div>
 
 
@@ -28,14 +20,17 @@
       <h3>Features:  </h3>
 	  <h4>
 	  <ul style= "color:gray;">
-	  <li>Displacement: 155 cc</li>
-	  <li>Kerb Weight: 142 kg</li>
-      <li>Colours:<br>	
-			Thunder Grey<br>
-			Racing Blue<br>
-			Darknight<br></li>
-      <li>Max Power: 18.37 bhp</li>
-      </ul>
+	  <li>Style No CP01391</li>
+	  <li>Height 20.20 mm</li>
+      <li>Width 20.20 mm</li>
+      <li>Total Weight 3.52 Grams</li>
+      <li>Total No. of Diamonds 1</li>
+      <li>Total Weight 0.035 Ct</li>
+      <li>Clarity SI</li>
+      <li>Color GH</li>
+	  <li>Diamond Weight (Approx) 0.035 ct</li>
+	  <li>Setting Type Bezel</li>
+	  </ul>
 	  </h4>
 	  </i>
 	  </p>
@@ -55,10 +50,8 @@
 			
 		<div class="product-price">
           <span>₹ {{this.product.productRate}}</span>
-          <a href="#" (click)='onPurchase()' class="cart-btn">Buy Now</a>
+          <a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a>
         </div>
       </div>
   
 	</main>
-  </body>
-</html>

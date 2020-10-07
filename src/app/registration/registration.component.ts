@@ -29,21 +29,34 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.registrationForm=this.fb.group({
-      name:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$') ]],
-      phoneNo:['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      email:['',[Validators.required,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      username:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$'),Validators.minLength(10) ]],
-      password:['', [Validators.required, Validators.minLength(8)]],
-      confirmPassword:['', [Validators.required, Validators.minLength(8)]],
-      dob:['', Validators.required],
-      address:['', Validators.required],
+    //   name:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$') ]],
+    //   phoneNo:['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+    //   email:['',[Validators.required,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+    //   username:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$'),Validators.minLength(10) ]],
+    //   password:['', [Validators.required, Validators.minLength(8)]],
+    //   confirmPassword:['', [Validators.required, Validators.minLength(8)]],
+    //   dob:['', Validators.required],
+    //   address:['', Validators.required],
      
-     savingsAccount:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
-     ifsc:['',Validators.required],
+    //  savingsAccount:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
+    //  ifsc:['',Validators.required],
     
-     aadhar:['',Validators.required], 
-     pan:['',Validators.required]
-     
+    //  aadhar:['',Validators.required], 
+    //  pan:['',Validators.required]
+    name:['', [Validators.required,Validators.pattern('^[a-zA-Z][ a-zA-Z]+$') ]],
+    phoneNo:['', [Validators.required, Validators.pattern("[0-9]{10}$")]],
+    email:['',[Validators.required,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+    username:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9]+$'),Validators.minLength(3) ]],
+    password:['', [Validators.required, Validators.minLength(8)]],
+    confirmPassword:['', [Validators.required, Validators.minLength(8)]],
+    
+    address:['', Validators.required],
+    dob:['', Validators.required],
+   savingsAccount:['',[Validators.required,Validators.pattern("[0-9]{12}$"),Validators.minLength(12),Validators.maxLength(12)]],
+   ifsc:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]],
+  
+   aadhar:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]], 
+   pan:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]]
      
     },
     // {validator: this.confirmedValidator('password', 'confirmPassword')}

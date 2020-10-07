@@ -25,28 +25,44 @@ export class EditregistrationComponent implements OnInit {
   random:number;
   cardType:CardType;
   cardTypes:CardType[];
+  dateSetter:Date;
   constructor(private fb:FormBuilder, private router: Router,private finkartService:FinkartService) {
     this.registration=new Registration();
     this.customer=new Customer();
     this.customer.card=new Card();
     this.customer.card.cardType=new CardType();
+    this.dateSetter=new Date();
    }
 
   ngOnInit(): void {
 
-   this.editForm=this.fb.group({
-    name:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$') ]],
-    phoneNo:['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-    email:['',[Validators.required,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-    username:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$'),Validators.minLength(10) ]],
-    dob:['', Validators.required],
-    address:['', Validators.required],
+    this.editForm=this.fb.group({
+  //   name:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$') ]],
+  //   phoneNo:['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+  //   email:['',[Validators.required,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+  //   username:['', [Validators.required,Validators.pattern('^[a-zA-Z]+$'),Validators.minLength(10) ]],
+  //   dob:['', Validators.required],
+  //   address:['', Validators.required],
    
-   savingsAccount:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
-   ifsc:['',Validators.required],
+  //  savingsAccount:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
+  //  ifsc:['',Validators.required],
   
-   aadhar:['',Validators.required], 
-   pan:['',Validators.required],
+  //  aadhar:['',Validators.required], 
+  //  pan:['',Validators.required],
+  name:['', [Validators.required,Validators.pattern('^[a-zA-Z][ a-zA-Z]+$') ]],
+    phoneNo:['', [Validators.required, Validators.pattern("[0-9]{10}$")]],
+    email:['',[Validators.required,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+    username:['', [Validators.required,Validators.pattern('^[a-zA-Z0-9]+$'),Validators.minLength(3) ]],
+    password:['', [Validators.required, Validators.minLength(8)]],
+    confirmPassword:['', [Validators.required, Validators.minLength(8)]],
+    
+    address:['', Validators.required],
+    dob:['', Validators.required],
+   savingsAccount:['',[Validators.required,Validators.pattern("[0-9]{12}$"),Validators.minLength(12),Validators.maxLength(12)]],
+   ifsc:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]],
+  
+   aadhar:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]], 
+   pan:['',[Validators.required,Validators.pattern('^[a-zA-Z0-9]+$')]],
    comments:['',Validators.required]
    
    
@@ -123,7 +139,7 @@ export class EditregistrationComponent implements OnInit {
             alert(JSON.stringify(this.customer.card.cardType))
             this.customer.card.remainingLimit=this.customer.card.cardType.creditLimit;
             this.customer.card.usedLimit=0;
-            this.customer.card.validTill=new Date((new Date().getFullYear())+5);
+            this.customer.card.validTill=new Date(this.dateSetter.getFullYear()+5,this.dateSetter.getMonth(),this.dateSetter.getDate());
             alert(JSON.stringify(this.customer))
             this.finkartService.updateCustomer(this.customer).subscribe(data=>{alert("complete")});
           })

@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
 // logOff user
 logOut():void{
   if(localStorage.getItem("username")!=null){
-    localStorage.removeItem("username");
+    localStorage.clear();
     this.router.navigate(['/home']);
   }
 }

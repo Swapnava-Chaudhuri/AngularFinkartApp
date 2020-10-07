@@ -16,7 +16,7 @@ export class AdminnavbarComponent implements OnInit {
 }
 logOut():void{
   if(localStorage.getItem("username")!=null){
-    localStorage.removeItem("username");
+    localStorage.clear();
     this.router.navigate(['/home']);
   }
 }

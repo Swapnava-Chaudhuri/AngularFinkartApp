@@ -35,7 +35,6 @@ import { Product7Component } from './product7/product7.component';
 import { Product8Component } from './product8/product8.component';
 import { Product9Component } from './product9/product9.component';
 import { Product10Component } from './product10/product10.component';
-import { Product11Component } from './product11/product11.component';
 
 
 
@@ -56,6 +55,15 @@ const routes:Routes=[
   {path:'emitable',component:EmitableComponent},
   {path:'productlist',component:ProductPageComponent},
   {path:'product1',component:Product1Component},
+  {path:'product2',component:Product2Component},
+  {path:'product3',component:Product3Component},
+  {path:'product4',component:Product4Component},
+  {path:'product5',component:Product5Component},
+  {path:'product6',component:Product6Component},
+  {path:'product7',component:Product7Component},
+  {path:'product8',component:Product8Component},
+  {path:'product9',component:Product9Component},
+  {path:'product10',component:Product10Component},
   {path:'**',redirectTo:'home'}
 ]
 
@@ -92,8 +100,7 @@ const routes:Routes=[
     Product7Component,
     Product8Component,
     Product9Component,
-    Product10Component,
-    Product11Component
+    Product10Component
   ],
   imports: [
     BrowserModule,

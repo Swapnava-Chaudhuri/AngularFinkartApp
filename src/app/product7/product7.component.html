@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <meta name="robots" content="noindex,follow" />
-
-  </head>
+<app-navbar></app-navbar>
 
   <body>
     <main class="container">
@@ -14,7 +6,7 @@
       <!-- Left Column / Headphones Image -->
       
 	  <div class="left-column">
-        <img data-image="red" class="active" src="src\assets\images\p7.jpg" alt="">
+        <img data-image="red" class="active" src="assets\images\p4.jpg" alt="">
       </div>
 
 
@@ -28,13 +20,13 @@
       <h3>Features:  </h3>
 	  <h4>
 	  <ul style= "color:gray;">
-	  <li>1.3 GhzGHz Intel i7-1065G7 10th Gen processor</li>
-	  <li>16GB DDR4 RAM</li>
-      <li>512GB SSD</li>
-      <li>Windows 10 Pro/Intel Iris Plus Graphics</li>
-      <li>13.3-inch screen, Intel Iris Plus Graphics Graphics</li>
-      <li>Windows 10 Pro operating system</li>
-      <li>1.27kg laptop</li>
+	  <li>Noise Cancelling : Wireless Noise Cancellation Headphones with Noise Cancellation Optimizer</li>
+	  <li>Extra Bass : Wireless Extra Bass Headphones for Bass Music</li>
+      <li>Quick attention mode</li>
+      <li>Touch controls</li>
+      <li>Smart listening</li>
+      <li>Long battery life</li>
+      <li>Quick charging : Quick charge for 10min charge for 60 min play back</li>
 	  </ul>
 	  </h4>
 	  </i>
@@ -55,10 +47,9 @@
 			
 		<div class="product-price">
           <span>₹ {{this.product.productRate}}</span>
-          <a href="#" (click)='onPurchase()' class="cart-btn">Buy Now</a>
+          <a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a>
         </div>
       </div>
   
 	</main>
-  </body>
-</html>
+ 

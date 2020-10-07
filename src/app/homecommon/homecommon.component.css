@@ -47,3 +47,11 @@ button {
   width: 100%;
   opacity: 0.9;
 }
+.navbar.center .navbar-inner {
+  text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+  display:inline-block;
+  float: none;
+}

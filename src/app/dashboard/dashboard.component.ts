@@ -25,6 +25,7 @@ export class DashboardComponent implements OnInit {
   paypurchase:Purchase;
   payemis:Emi[];
   paid:boolean=false;
+  validTillDate:string;
   
   constructor(private finkartService:FinkartService,private router:Router) { 
     this.customer=new Customer();
@@ -35,6 +36,7 @@ export class DashboardComponent implements OnInit {
     this.emiPayable=0;
     this.payemis=[];
     this.paypurchases=[];
+    this.validTillDate="";
   }
 
   ngOnInit(): void {
@@ -43,6 +45,7 @@ export class DashboardComponent implements OnInit {
       this.customer=data;
       this.finkartService.getCardTypeByCardNumber(this.customer.card.cardNumber).subscribe(data2=>{
         this.customer.card.cardType=data2;
+        this.validTillDate=JSON.stringify(this.customer.card.validTill)//1
         localStorage.setItem("currentCustomer",JSON.stringify(this.customer));
         for(this.purchase of this.customer.purchases)
         {
@@ -55,6 +58,8 @@ export class DashboardComponent implements OnInit {
             this.customer.purchases[this.i].product=dataArray[this.i];
             this.i++;
           }
+          
+         // alert(this.validTillDate)
         // alert(JSON.stringify (this.customer));
         localStorage.setItem("currentCustomer",JSON.stringify(this.customer));
           for(this.purchase of this.customer.purchases){
@@ -106,5 +111,19 @@ export class DashboardComponent implements OnInit {
     
   }}
  
+  sortPurchaseId(){
+    //alert("lol")
+    this.customer.purchases = this.customer.purchases.sort((n1,n2) => {
+      if (n1.purchaseId > n2.purchaseId) {
+          return 1;
+      }
+  
+      if (n1.purchaseId < n2.purchaseId) {
+          return -1;
+      }
+  
+      return 0;
+  });
+  }
 
 }

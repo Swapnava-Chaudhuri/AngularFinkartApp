@@ -1,17 +1,16 @@
 <app-navbar></app-navbar>
-<!DOCTYPE html>
-<html>
-<body>
-
 <h2 style="text-align:center">EMI Paid</h2>
-<table>
+<table class="table table-hover">
+  <thead class="table-dark">
   <tr>
-    <th>EMI ID</th>
-    <th>Payment Month</th>
-    <th>Purchase ID</th>
+    <th (click)='sortId()'>EMI ID</th>
+    <th (click)='sortMonths()'>Payment Month</th>
+    <th (click)='sortPurchaseId()'>Purchase ID</th>
     <th>Product Name</th>
-	<th>EMI</th>
+  <th>EMI</th>
   </tr>
+</thead>
+<tbody>
  <tr *ngFor="let emi of paidEmis">
 	<td>{{emi.emiId}}</td>
 	<td>{{emi.monthOfPayment}}</td>
@@ -19,27 +18,29 @@
     <td>{{emi.productName}}</td>
 	<td>{{emi.emiAmount}}</td>
   </tr>
-
-</table>
+</tbody>
+</table >
 <h2 style="text-align:center">Future Payments</h2>
-<table>
+<table class="table table-hover">
+    <thead class="table-dark">
     <tr>
-        <th>EMI ID</th>
-        <th>Payment Month</th>
-        <th>Purchase ID</th>
+        <th (click)='sortId2()'>EMI ID</th>
+        <th (click)='sortMonths2()'>Payment Month</th>
+        <th (click)='sortPurchaseId2()'>Purchase ID</th>
         <th>Product Name</th>
         <th>EMI</th>
-      </tr>
+    </tr>
+    </thead>
+    <tbody>
   <tr *ngFor="let emi of pendingEmis">
-	<td>{{emi.emiId}}</td>
-	<td>{{emi.monthOfPayment}}</td>
+	  <td>{{emi.emiId}}</td>
+  	<td>{{emi.monthOfPayment}}</td>
     <td>{{emi.purchaseId}}</td>
     <td>{{emi.productName}}</td>
-	<td>{{emi.emiAmount}}</td>
+  	<td>{{emi.emiAmount}}</td>
   </tr>
+</tbody>
  </table>
-</body>
-</html>
 
 
 

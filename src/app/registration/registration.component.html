@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
        <label for="phoneNo"><b>Phone Number</b></label>
-         <input type="tel" id="phoneNo" name="phoneNo" placeholder="+91-XXXXXXXXXX" id="phoneNo" formControlName="phoneNo">
+         <input type="tel" id="phoneNo" name="phoneNo" placeholder="XXXXXXXXXX" id="phoneNo" formControlName="phoneNo">
          <p *ngIf = "registrationForm.controls.phoneNo.errors && (registrationForm.controls.phoneNo.touched ||registrationForm.controls.phoneNo.dirty)">Phone number is required</p>
       </div>
       <div class="form-group">
@@ -42,8 +42,8 @@
 
       <div class="form-group">
        <label for="dob"><b>Date of Birth</b></label>
-        <input type="date" id="dob" placeholder="Date of Birth" name="dob"  formControlName="dob" >
-        <p *ngIf = "registrationForm.controls.dob.errors && (registrationForm.controls.dob.touched ||registrationForm.controls.dob.dirty)">Confirm Password is required</p>
+        <input type="date" id="dob" placeholder="Date of Birth" max='1999-10-09' min='1900-01-01' name="dob"  formControlName="dob" >
+        <p *ngIf = "registrationForm.controls.dob.errors && (registrationForm.controls.dob.touched ||registrationForm.controls.dob.dirty)">Date of Birth is required</p>
       </div>
       
       <div class="form-group">
@@ -145,7 +145,7 @@
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
         </label>
   
-        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        <p>By creating an account you agree to our <a href="https://drive.google.com/file/d/1e759_RbYoA720rxwO63Uq1gpjHarf6cF/view" style="color:dodgerblue">Terms & Privacy</a>.</p>
   
         <div class="clearfix">
           <button type="button" class="cancelbtn">Cancel</button>

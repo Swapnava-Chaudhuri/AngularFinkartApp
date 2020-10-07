@@ -1,88 +1,90 @@
 {
-    "username": "lorem",
-    "dob": "3880-04-24",
-    "email": "swapnava.chaudhuri@gmail.com",
-    "phoneNo": "787878788",
-    "address": "123/32/4 adjaopdj road,mumbai-90",
-    "name": "Makarand Bhoir",
-    "savingsAccount": "8909898321",
-    "aadhar": "2312321",
-    "pan": "23131BGU",
-    "bankName": "SBI",
-    "ifsc": "213FDS",
-    "card": {
-       "cardNumber": "1234-2345-1233-1233",
-       "validTill": "3921-05-04",
-       "usedLimit": 40000,
-       "remainingLimit": 0,
-       "cardType": {
-          "cardType": "gold",
-          "joiningFees": 199.99,
-          "creditLimit": 40000
-       }
-    },
-    "purchases": [
-       {
-          "purchaseId": 1,
-          "emiAmount": 10000,
-          "months": 3,
-          "dateOfPurchase": "2020-09-30",
-          "emis": [
-             {
-                "emiId": 2,
-                "dateOfPayment": "2020-03-30",
-                "balance": 20000,
-                "paid": false
-             },
-             {
-                "emiId": 3,
-                "dateOfPayment": "2020-04-30",
-                "balance": 10000,
-                "paid": true
-             },
-             {
-                "emiId": 1,
-                "dateOfPayment": "2020-10-05",
-                "balance": 30000,
-                "paid": false
-             }
-          ],
+   "username": "Harsh789",
+   "dob": "2020-02-29",
+   "email": "jalananmol123@gmail.com",
+   "phoneNo": "9641202848",
+   "address": "123/32/4 adjaopdj road,mumbai-90",
+   "name": "Harsh Jalan",
+   "savingsAccount": "565656565656",
+   "aadhar": "123456789012",
+   "pan": "121212U",
+   "bankName": "SBI",
+   "ifsc": "213FDS",
+   "card": {
+      "cardNumber": "1234-2345-1233-1288",
+      "validTill": "3921-05-04",
+      "usedLimit": 28501,
+      "remainingLimit": 271499,
+      "cardType": {
+         "cardType": "gold",
+         "joiningFees": 500,
+         "creditLimit": 300000
+      }
+   },
+   "purchases": [
+      {
+         
+         "emiAmount": 6633,
+         "months": 3,
+         "dateOfPurchase": "2020-07-10",
+         "emis": [
+            {
+               
+               "dateOfPayment": "2020-08-05",
+               "balance": 19899,
+               "paid": true
+            },
+            {
+               
+               "dateOfPayment": "2020-09-05",
+               "balance": 13266,
+               "paid": true
+            },
+            {
+               
+               "dateOfPayment": "2020-10-05",
+               "balance": 6633,
+               "paid": false
+            }
+         ],
           "product": {
-             "productId": 23,
-             "productRate": 30000,
-             "productName": "smartphone"
+            "productId": 27,
+            "productRate": 19899,
+            "productName": "Sony Wireless Headphones"
           }
-       },
-       {
-        
-        "emiAmount": 10000,
-        "months": 3,
-        "dateOfPurchase": "2020-09-30",
-        "emis": [
-           {
-              
-              "dateOfPayment": "2020-10-05",
-              "balance": 20000,
-              "paid": false
-           },
-           {
-              
-              "dateOfPayment": "2020-04-30",
-              "balance": 10000,
-              "paid": false
-           },
-           {
-              
-              "dateOfPayment": "2020-02-29",
-              "balance": 30000,
-              "paid": false
-           }
-        ],
-        "product": {
-           "productId": 23,
-           "productRate": 30000,
-           "productName": "smartphone"
-        }
-     }
-    ]
- }
+     
+     
+    },
+{
+       
+       "emiAmount": 10934,
+       "months": 3,
+       "dateOfPurchase": "2020-08-05",
+       "emis": [
+          {
+             
+             "dateOfPayment": "2020-09-05",
+             "balance": 32802,
+             "paid": true
+          },
+          {
+             
+             "dateOfPayment": "2020-10-05",
+             "balance": 21868,
+             "paid": false
+          },
+          {
+             
+             "dateOfPayment": "2020-11-05",
+             "balance": 10934,
+             "paid": false
+          }
+       ],
+       "product": {
+          "productId": 29,
+          "productRate": 32802,
+          "productName": "Platinum Band"
+       }
+    }
+   ]
+}

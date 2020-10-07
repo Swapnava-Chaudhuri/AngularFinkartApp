@@ -1,40 +1,30 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <meta name="robots" content="noindex,follow" />
-
-  </head>
+<app-navbar></app-navbar>
 
   <body>
     <main class="container">
 
-      <!-- Left Column / Headphones Image -->
+  
       
 	  <div class="left-column">
-        <img data-image="red" class="active" src="src\assets\images\p4.jpg" alt="">
+        <img data-image="red" class="active" src="assets\images\p6.jpg" alt="">
       </div>
 
 
-      <!-- Right Column -->
+ 
       <div class="right-column">
 
-        <!-- Product Description -->
         <div class="product-description">
           <h1 style="color:orange;">{{this.product.productName}} </h1>
           <p style= "color:gray;"><i> 
       <h3>Features:  </h3>
 	  <h4>
 	  <ul style= "color:gray;">
-	  <li>Noise Cancelling : Wireless Noise Cancellation Headphones with Noise Cancellation Optimizer</li>
-	  <li>Extra Bass : Wireless Extra Bass Headphones for Bass Music</li>
-      <li>Quick attention mode</li>
-      <li>Touch controls</li>
-      <li>Smart listening</li>
-      <li>Long battery life</li>
-      <li>Quick charging : Quick charge for 10min charge for 60 min play back</li>
+	  <li>Sensor: APS-C CMOS Sensor with 24.1 MP (high resolution for large prints and image cropping)</li>
+	  <li>ISO: 100-6400 sensitivity range</li>
+      <li>Image Processor: DIGIC 4+ with 9 autofocus points</li>
+      <li>Video Resolution: Full HD video with fully manual control and selectable frame rates</li>
+      <li>Connectivity: WiFi, NFC and Bluetooth built-in</li>
+      <li>Lens Mount: EF-S mount compatible with all EF and EF-S lenses</li>
 	  </ul>
 	  </h4>
 	  </i>
@@ -55,10 +45,11 @@
 			
 		<div class="product-price">
           <span>₹ {{this.product.productRate}}</span>
-          <a href="#" (click)='onPurchase()' class="cart-btn">Buy Now</a>
+          <a a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a>
         </div>
       </div>
   
 	</main>
-  </body>
-</html>
+ 
+
+

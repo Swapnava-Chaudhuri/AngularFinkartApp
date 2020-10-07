@@ -47,7 +47,7 @@ export class Product1Component implements OnInit {
    if( confirm("Are you sure you want to purchase? "))
    {
      //alert("purchased")
-     if((this.customer.card.usedLimit+(this.product.productRate/this.months))<=this.customer.card.cardType.creditLimit)
+     if((this.customer.card.usedLimit+(this.product.productRate))<=this.customer.card.cardType.creditLimit)
      {
        this.customer.card.usedLimit=this.customer.card.usedLimit+this.product.productRate;
        this.customer.card.remainingLimit=this.customer.card.cardType.creditLimit-this.customer.card.usedLimit;

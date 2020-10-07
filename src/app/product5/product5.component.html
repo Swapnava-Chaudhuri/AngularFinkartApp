@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <meta name="robots" content="noindex,follow" />
+<app-navbar></app-navbar>
 
-  </head>
-
-  <body>
     <main class="container">
 
       <!-- Left Column / Headphones Image -->
       
 	  <div class="left-column">
-        <img data-image="red" class="active" src="src\assets\images\p5.jpg" alt="">
+        <img data-image="red" class="active" src="assets\images\p7.jpg" alt="">
       </div>
 
 
@@ -28,10 +19,12 @@
       <h3>Features:  </h3>
 	  <h4>
 	  <ul style= "color:gray;">
-	  <li>HP EliteBook 1030 G2 X 360 Notebook</li>
-	  <li>PC 13.3 inch Laptops (Intel CoreTM i7-7500U Processor</li>
-	  <li>8GB RAM | 512GB SSD | Win10 PRO | Integrated Graphics )</li>
-      <li>3 Years onsite warranty by HP</li>
+	  <li>Engine Capacity: 373.2 CC</li>
+	  <li>Max Power: 43.00 bhp @ 9000 rpm</li>
+      <li>Mileage: 35 Kmpl</li>
+      <li>Starting Mechanism: Self Start</li>
+      <li>Ignition: Fuel Injection System</li>
+      <li>Transmission: 6 Speed</li>
 	  </ul>
 	  </h4>
 	  </i>
@@ -52,11 +45,9 @@
 			
 		<div class="product-price">
           <span>₹ {{this.product.productRate}}</span>
-          <a href="#" (click)='onPurchase()' class="cart-btn">Buy Now</a>
+          <a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a>
         </div>
       </div>
   
 	</main>
-  </body>
-</html>
-
+ 

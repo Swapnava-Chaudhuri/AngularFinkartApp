@@ -1,20 +1,12 @@
+<app-navbar></app-navbar>
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
-    <meta name="robots" content="noindex,follow" />
 
-  </head>
-
-  <body>
     <main class="container">
 
       <!-- Left Column / Headphones Image -->
       
 	  <div class="left-column">
-        <img data-image="red" class="active" src="src\assets\images\p8.jpg" alt="">
+        <img data-image="red" class="active" src="assets\images\p5.jpg" alt="">
       </div>
 
 
@@ -28,12 +20,13 @@
       <h3>Features:  </h3>
 	  <h4>
 	  <ul style= "color:gray;">
-	  <li>Engine Capacity: 373.2 CC</li>
-	  <li>Max Power: 43.00 bhp @ 9000 rpm</li>
-      <li>Mileage: 35 Kmpl</li>
-      <li>Starting Mechanism: Self Start</li>
-      <li>Ignition: Fuel Injection System</li>
-      <li>Transmission: 6 Speed</li>
+	  <li>1.3 GhzGHz Intel i7-1065G7 10th Gen processor</li>
+	  <li>16GB DDR4 RAM</li>
+      <li>512GB SSD</li>
+      <li>Windows 10 Pro/Intel Iris Plus Graphics</li>
+      <li>13.3-inch screen, Intel Iris Plus Graphics Graphics</li>
+      <li>Windows 10 Pro operating system</li>
+      <li>1.27kg laptop</li>
 	  </ul>
 	  </h4>
 	  </i>
@@ -54,10 +47,8 @@
 			
 		<div class="product-price">
           <span>₹ {{this.product.productRate}}</span>
-          <a href="#" (click)='onPurchase()' class="cart-btn">Buy Now</a>
+          <a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a>
         </div>
       </div>
   
 	</main>
-  </body>
-</html>
