@@ -1,7 +1,7 @@
 <app-adminnavbar></app-adminnavbar>
     <form class="modal-content" action="#" form [formGroup]="editForm" (ngSubmit)="onSubmit()">
     <div class="imgcontainer">
-        <img src="assets/images/login_avtar.jpg" alt="Avatar" class="avatar" >
+      <img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" alt="Avatar" class="avatar" style="height: 200px;width:200px">
       </div>
       <div class="container">
         <div class="form-group">
@@ -30,7 +30,7 @@
       <div class="form-group">
        <label for="dob"><b>Date of Birth</b></label>
         <input type="date" id="dob" placeholder="Date of Birth" name="dob"  formControlName="dob" >
-        <p *ngIf = "editForm.controls.dob.errors && (editForm.controls.dob.touched ||editForm.controls.dob.dirty)">Confirm Password is required</p>
+        <p *ngIf = "editForm.controls.dob.errors && (editForm.controls.dob.touched ||editForm.controls.dob.dirty)">Date of Birth is required</p>
       </div>
       
       <div class="form-group">
@@ -106,8 +106,8 @@
      
         <div>
        <label for="cardType"><b>Card Type</b></label >
-       <select  name="cardType" id="cardType" (change)="changeTypeCard($event)" [value]='this.registration.cardType'>
-         <option value="platinum">Platinum</option>
+       <select type="cardType" name="cardType" id="cardType" (change)="changeTypeCard($event)" [value]='this.registration.cardType'>
+         <option value="platinum">Platinum</option> 
          <option value="gold">Gold</option>
          </select>
         </div>
@@ -135,12 +135,12 @@
               <p *ngIf = "editForm.controls.comments.errors && (editForm.controls.comments.touched ||editForm.controls.comments.dirty)">Comments is required</p>
             </div>
 
-            <div class="form-group" >
-              
+            <div  class="form-group" >
+              <b>Deactivated </b>
                 <!-- <input id="toggle-event" type="checkbox"  data-toggle="toggle" data-on="Accepted" data-off="Deactivated" data-onstyle="success" data-offstyle="danger" (change)="toggleEditable($event)" [checked]="this.registration.status==='accepted'?'checked':null"> -->
                 <label class="switch">
-                  <input type="checkbox" id="toggle-event" (change)="toggleEditable($event)" [checked]="this.registration.status==='accepted'?'checked':null">>
-                  <span class="slider"></span>
+                  <input type="checkbox" id="toggle-event" (change)="toggleEditable($event)" [checked]="this.registration.status==='accepted'?'checked':null">
+                  <span class="slider"><div style="padding-inline-start: 65px;"><b>Accept</b></div></span>
                 </label>
               </div>
   

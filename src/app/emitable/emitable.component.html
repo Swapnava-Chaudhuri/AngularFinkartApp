@@ -16,7 +16,7 @@
 	<td>{{emi.monthOfPayment}}</td>
     <td>{{emi.purchaseId}}</td>
     <td>{{emi.productName}}</td>
-	<td>{{emi.emiAmount}}</td>
+	<td>₹ {{emi.emiAmount|number : '1.2-2'}}</td>
   </tr>
 </tbody>
 </table >
@@ -37,7 +37,7 @@
   	<td>{{emi.monthOfPayment}}</td>
     <td>{{emi.purchaseId}}</td>
     <td>{{emi.productName}}</td>
-  	<td>{{emi.emiAmount}}</td>
+  	<td>₹ {{emi.emiAmount|number : '1.2-2'}}</td>
   </tr>
 </tbody>
  </table>

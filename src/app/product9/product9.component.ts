@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Customer } from '../classes/customer';
 import { Emi } from '../classes/emi';
 import { Product } from '../classes/product';
@@ -19,7 +20,7 @@ export class Product9Component implements OnInit {
   emis:Emi[];
   emi:Emi;
   i:number;
-  constructor(private finkartService:FinkartService) {
+  constructor(private finkartService:FinkartService,private router:Router) {
     this.customer=new Customer();
     this.months=3;
     this.product=new Product();
@@ -30,7 +31,7 @@ export class Product9Component implements OnInit {
 
   ngOnInit(): void {
     this.customer=JSON.parse(localStorage.getItem("currentCustomer"));
-    alert(JSON.stringify(this.customer))
+  //  alert(JSON.stringify(this.customer))
     this.finkartService.getAllProducts().subscribe(data=>{
       this.products=data;
       this.product.productName=this.products[8].productName;//change this only
@@ -56,7 +57,7 @@ export class Product9Component implements OnInit {
        {
         let date:Date=new Date();
         this.emi.dateOfPayment=new Date(date.setMonth(date.getMonth()+this.i+1));
-        alert(JSON.stringify(this.emi.dateOfPayment));
+      //  alert(JSON.stringify(this.emi.dateOfPayment));
         this.emi.balance=this.product.productRate-((this.product.productRate/this.months)*this.i);
         this.emi.paid=false;
         this.emis.push(this.emi);
@@ -68,10 +69,12 @@ export class Product9Component implements OnInit {
        this.purchase.months=this.months;
        this.purchase.product=this.product;
        this.customer.purchases.push(this.purchase);
-       alert(JSON.stringify(this.customer));
+    //   alert(JSON.stringify(this.customer));
        this.emis=[];
        this.purchase=new Purchase();
-       this.finkartService.updateCustomer(this.customer).subscribe();
+       this.finkartService.updateCustomer(this.customer).subscribe(data21=>{
+        this.router.navigate(['dashboard'])
+      });
      }
      else
      alert("this transaction will exceed your credit limit")

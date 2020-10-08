@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit
        { localStorage.setItem("username",this.loginForm.controls.username.value);
         this.router.navigate(['/admin']);}
         else
-        alert("user does not exist");
+        alert("User does not exist");
       });
                          
       

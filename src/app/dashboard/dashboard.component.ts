@@ -84,7 +84,7 @@ export class DashboardComponent implements OnInit {
 
   onPay(){
     if(this.emiPayable!=0){
-    alert("pay")
+    //alert("pay")
     for(this.purchase of this.customer.purchases){
       //alert(JSON.stringify(this.purchase))
       this.payemis=[];
@@ -104,7 +104,7 @@ export class DashboardComponent implements OnInit {
     this.customer.purchases=this.paypurchases;
     this.customer.card.usedLimit=this.customer.card.usedLimit-this.emiPayable;
     this.customer.card.remainingLimit=this.customer.card.cardType.creditLimit-this.customer.card.usedLimit;
-    alert(JSON.stringify(this.customer));
+    //alert(JSON.stringify(this.customer));
     this.emiPayable=0;
     this.paid=true;
     this.finkartService.updateCustomer(this.customer).subscribe(data5=>{ localStorage.setItem("currentCustomer",JSON.stringify(this.customer));});

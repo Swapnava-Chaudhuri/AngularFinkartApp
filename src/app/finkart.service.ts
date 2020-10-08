@@ -12,6 +12,7 @@ export class FinkartService {
 
   constructor(private http:HttpClient) { }
   baseUrl:string='http://localhost:9091/FinkartApp/'
+  //baseUrl:string='https://short-cougar-25.loca.lt/FinkartApp/'
   getLogin(login:Login){
     return this.http.post(this.baseUrl+'login',login,{responseType: 'text'});
   }

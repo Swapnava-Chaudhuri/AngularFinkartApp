@@ -21,7 +21,7 @@ export class Forgotpassword1Component implements OnInit {
   })
   }
   onSubmit(){
-    alert("hi");
+    //alert("hi");
     this.finkartService.sendOtp(this.forgotPasswordForm.controls.email.value).subscribe(data=>{this.otp=<string>data;
       localStorage.setItem("otp",this.otp);
       localStorage.setItem("mail",this.forgotPasswordForm.controls.email.value);

@@ -39,23 +39,23 @@ onSubmit(){
     
   }
   else
-  alert("wrong pass");
+  alert("Password Does Not Match");
 }
 
 updateLoginAfterGettingUsernameByEmail(email:string)
-{   alert(email)
+{   //alert(email)
   this.finkartService.getRegistrations().subscribe(data=>{
     this.resgistrations=data;
-    alert(JSON.stringify(this.resgistrations))
+    //alert(JSON.stringify(this.resgistrations))
     for( this.registration of this.resgistrations){
       if(this.registration.email==email)
       this.username= this.registration.username;
     }
     this.login.username=this.username;
-    alert(this.login.username);
+    //alert(this.login.username);
     this.login.password=this.changePasswordForm.controls.passOne.value;
     this.login.type="user";
-    this.finkartService.updateLogin(this.login).subscribe(data=>{alert("password changed")});
+    this.finkartService.updateLogin(this.login).subscribe(data=>{alert("Password changed")});
   });
 }
 

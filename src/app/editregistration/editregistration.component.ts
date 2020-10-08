@@ -86,7 +86,7 @@ export class EditregistrationComponent implements OnInit {
   }
 
   onSubmit(){
-    alert("registered")
+    alert("Registration Details Updated")
     this.submitted=true;
 
     //this.login.password=this.editForm.controls.password.value;
@@ -106,7 +106,7 @@ export class EditregistrationComponent implements OnInit {
     this.registration.pan=this.editForm.controls.pan.value;
     this.registration.ifsc=this.editForm.controls.ifsc.value;
     this.registration.comments=this.editForm.controls.comments.value;
-    alert(JSON.stringify(this.registration));
+    //alert(JSON.stringify(this.registration));
     //alert(JSON.stringify(this.login));
     //this.finkartService.insertLogin(this.login).subscribe();
     this.finkartService.updateRegistration(this.registration).subscribe(data=>{
@@ -125,23 +125,23 @@ export class EditregistrationComponent implements OnInit {
           this.customer.bankName=this.registration.bankName;
           this.customer.ifsc=this.registration.ifsc;
           this.customer.card.cardNumber=this.generateCard();
-          alert( this.customer.card.cardNumber)
+          //alert( this.customer.card.cardNumber)
           this.finkartService.getAllCards().subscribe(data2=>{
             this.cardTypes=data2;
             for(this.cardType of this.cardTypes){//
               {if(this.cardType.cardType==this.registration.cardType)
               break;}
             }
-            alert(JSON.stringify(this.cardType))
+            //alert(JSON.stringify(this.cardType))
             this.customer.card.cardType.cardType=this.cardType.cardType;
             this.customer.card.cardType.creditLimit=this.cardType.creditLimit;
             this.customer.card.cardType.joiningFees=this.cardType.joiningFees;
-            alert(JSON.stringify(this.customer.card.cardType))
+            //alert(JSON.stringify(this.customer.card.cardType))
             this.customer.card.remainingLimit=this.customer.card.cardType.creditLimit;
             this.customer.card.usedLimit=0;
             this.customer.card.validTill=new Date(this.dateSetter.getFullYear()+5,this.dateSetter.getMonth(),this.dateSetter.getDate());
-            alert(JSON.stringify(this.customer))
-            this.finkartService.updateCustomer(this.customer).subscribe(data=>{alert("complete")});
+           // alert(JSON.stringify(this.customer))
+            this.finkartService.updateCustomer(this.customer).subscribe(data=>{this.router.navigate(['/admin'])});
           })
         }
       });
@@ -150,7 +150,7 @@ export class EditregistrationComponent implements OnInit {
 
 
 onDelete(){
-  alert("deleted")
+  alert("User Deleted")
   this.finkartService.deleteRegistration(this.registration).subscribe(data=>{this.router.navigate(['/admin'])});
   
 }
@@ -161,7 +161,7 @@ generateCard():string{
  
   for(this.i=0;this.i<4;this.i++){
     this.random= Math.floor(Math.random() * (9999 - 1000) + 1000);
-    alert(this.random);
+    //alert(this.random);
     if(this.random>1000)
     {
       this.cardNo=this.cardNo+'-'+this.random;
@@ -171,7 +171,7 @@ generateCard():string{
       this.i--;
     }
   }
-  alert(this.cardNo)
+  //alert(this.cardNo)
   return this.cardNo.substr(10,19);
 }
 
@@ -196,7 +196,7 @@ generateCard():string{
     this.registration.status='accepted';
     else
     this.registration.status='deactivated'; 
-    alert(this.registration.status);
+    //alert(this.registration.status);
   }
 
 

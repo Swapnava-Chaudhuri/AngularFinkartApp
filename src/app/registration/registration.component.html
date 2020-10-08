@@ -1,14 +1,14 @@
 <app-navhome></app-navhome> 
     <form class="modal-content" action="#" form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="imgcontainer">
-        <img src="assets/images/login_avtar.jpg" alt="Avatar" class="avatar" >
+      <img src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" alt="Avatar" class="avatar" style="height: 200px;width:200px">
       </div>
       <div class="container">
         <div class="form-group">
        <label for="text"><b>Name</b></label>
        
         <input type="text" placeholder="Enter Full Name" name="name" id="name" formControlName="name" >
-        <p *ngIf = "registrationForm.controls.name.errors && (registrationForm.controls.name.touched ||registrationForm.controls.name.dirty)">Name is required</p>
+        <p  *ngIf = "registrationForm.controls.name.errors && (registrationForm.controls.name.touched ||registrationForm.controls.name.dirty)">Name is required</p>
         </div>
         <div class="form-group">
        <label for="phoneNo"><b>Phone Number</b></label>
@@ -30,7 +30,7 @@
       <div class="form-group">
         <label for="password"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" id="password" formControlName="password">
-        <p *ngIf = "registrationForm.controls.password.errors && (registrationForm.controls.password.touched ||registrationForm.controls.password.dirty)">Password of minimum is required</p>
+        <p *ngIf = "registrationForm.controls.password.errors && (registrationForm.controls.password.touched ||registrationForm.controls.password.dirty)">Password of minimum length 8 is required</p>
       </div>
 
        <div class="form-group">
@@ -119,18 +119,18 @@
      
         <div>
        <label for="cardType"><b>Card Type</b></label >
-       <select  name="cardType" id="cardType" (change)="changeTypeCard($event)">
+       <select type='cardType' name="cardType" id="cardType" (change)="changeTypeCard($event)">
          <option value="platinum">Platinum</option>
          <option value="gold">Gold</option>
          </select>
         </div>
        
        <div class="form-group">
-        <label for="aadhar"><b>aadhar Number</b></label>
+        <label for="aadhar"><b>Aadhar Number</b></label>
         <input type="text" id="aadhar" name="aadhar" placeholder="XXXX-XXXX-XXXX" formControlName="aadhar"><br><br>
         <p *ngIf = "registrationForm.controls.aadhar.errors && (registrationForm.controls.aadhar.touched ||registrationForm.controls.aadhar.dirty)">AADHAR NUMBER is required</p>
       </div>
-        <label for="a_img"><b>aadhar Upload</b></label>
+        <label for="a_img"><b>Aadhar Upload</b></label>
           <input type="file" id="a_pdf" name="a_pdf" accept=".pdf" required>
       
       <div class="form-group">
@@ -141,9 +141,9 @@
        <label for="p_pdf"><b>PAN Upload</b></label>
          <input type="file" id="p_pdf" name="p_pdf" accept=".pdf" required>
      
-        <label>
+        <!-- <label>
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label>
+        </label> -->
   
         <p>By creating an account you agree to our <a href="https://drive.google.com/file/d/1e759_RbYoA720rxwO63Uq1gpjHarf6cF/view" style="color:dodgerblue">Terms & Privacy</a>.</p>
   
